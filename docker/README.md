@@ -35,21 +35,21 @@ Sensor Harmonization (Landsat-5, Landsat-7, Landsat-8 and Sentinel-2)
 
 ## Usage
 
-To process a Landsat-5, Landsat-7, Landsat-8 or Sentinel-2  scene (e.g. `LC08_L1TP_220069_20190112_20190131_01_T1` or `S2A_MSIL1C_20190105T132231_N0207_R038_T23LLF_20190105T145859.SAFE`) run
+To process a Landsat-5, Landsat-7, Landsat-8 or Sentinel-2  scene (e.g. `LC08_L2TP_220069_20190112_20190131_01_T1` or `S2A_MSIL2A_20190105T132231_N9999_R038_T23LLF_20221006T174017.SAFE`) run
 
 ```bash
 $ docker run --rm \
     -v /path/to/input/:/mnt/input-dir:ro \
     -v /path/to/output:/mnt/output-dir:rw \
     -v /path/to/angles:/mnt/angles-dir:ro \
-    -t brazildatacube/sensor-harm:latest LC08_L1TP_220069_20190112_20190131_01_T1
+    -t brazildatacube/sensor-harm:latest LC08_L2TP_220069_20190112_20190131_01_T1
 ```
 
 ```bash
 $ docker run --rm \
     -v /path/to/input/:/mnt/input-dir:ro \
     -v /path/to/output:/mnt/output-dir:rw \
-    -t brazildatacube/sensor-harm:latest S2A_MSIL1C_20190105T132231_N0207_R038_T23LLF_20190105T145859.SAFE
+    -t brazildatacube/sensor-harm:latest S2A_MSIL2A_20190105T132231_N9999_R038_T23LLF_20221006T174017.SAFE
 ```
 
 Results are written on mounted `/mnt/output-dir/SCENEID`.
